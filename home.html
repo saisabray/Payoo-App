@@ -3,22 +3,248 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Payoo | Home</title>
+    <!-- Tailwind+Daisy -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Style -->
+    <style>
+      * {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <h2>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aut atque
-      error obcaecati dolorum sint porro animi, debitis ipsa rerum nobis
-      mollitia dignissimos, impedit sapiente dolor veritatis minima accusamus
-      laboriosam eos repellendus repellat. Explicabo repellendus iste
-      dignissimos, omnis ab itaque quia totam earum quos voluptas voluptates,
-      officiis quibusdam exercitationem delectus laborum, ratione accusamus
-      doloremque corporis. Eius necessitatibus tenetur accusamus repudiandae
-      quibusdam provident sapiente temporibus tempora pariatur aliquam cumque,
-      iste similique voluptas impedit deleniti suscipit officiis dolore
-      delectus. Sunt, aut! A corporis ad inventore minus nesciunt. Eaque maxime
-      officia fuga temporibus amet. Animi corrupti aut adipisci excepturi
-      ducimus. Adipisci, molestias qui.
-    </h2>
+  <body class="min-h-screen max-w-md bg-base-200 mx-auto bg-gray-100">
+    <header class="border-b-1 border-gray-200 bg-white sticky top-0 z-10">
+      <section class="flex justify-between w-11/12 py-3 items-center">
+        <div class="left flex justify-between items-center gap-3">
+          <img src="assets/logo.png" class="w-[60px]" alt="" />
+          <div class="left-sub">
+            <p class="font-bold text-xl">$ <span id="balance">45000</span></p>
+            <p class="text-neutral/50 text-base">Available Balance</p>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn rounded-lg">
+            <i class="fa-solid fa-right-from-bracket"></i> Log Out
+          </button>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section class="py-8 rounded-b-2xl bg-white">
+        <div class="space-y-5 w-11/12 mx-auto">
+          <h2 class="font-bold text-2xl text-neutral">
+            Welcome to Pay<span class="text-primary">oo</span>
+          </h2>
+          <p class="text-neutral/50 text-base">
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+          <div class="buttons grid grid-cols-3 gap-4">
+            <div
+              class="button btn flex-col w-32 h-full py-5 btn-primary btn-soft rounded-sm"
+            >
+              <img src="assets/opt-1.png" alt="" />
+              <p>Add Money</p>
+            </div>
+            <div
+              class="button btn flex-col w-32 h-full py-5 btn-primary btn-soft rounded-sm"
+            >
+              <img src="assets/opt-2.png" alt="" />
+              <p>Cash Out</p>
+            </div>
+            <div
+              class="button btn flex-col w-32 h-full py-5 btn-primary btn-soft rounded-sm"
+            >
+              <img src="assets/opt-1.png" alt="" />
+              <p>Add Money</p>
+            </div>
+            <div
+              class="button btn flex-col w-32 h-full py-5 btn-primary btn-soft rounded-sm"
+            >
+              <img src="assets/opt-1.png" alt="" />
+              <p>Add Money</p>
+            </div>
+            <div
+              class="button btn flex-col w-32 h-full py-5 btn-primary btn-soft rounded-sm"
+            >
+              <img src="assets/opt-1.png" alt="" />
+              <p>Add Money</p>
+            </div>
+            <div
+              class="button btn flex-col w-32 h-full py-5 btn-primary btn-soft rounded-sm"
+            >
+              <img src="assets/opt-1.png" alt="" />
+              <p>Add Money</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-10">
+        <div class="w-11/12 mx-auto space-y-5">
+          <div class="flex justify-between items-center">
+            <h2>Latest Payment</h2>
+            <p>View All</p>
+          </div>
+          <ul class="space-y-5">
+            <li
+              class="list-row flex justify-between p-3 bg-slate-300 rounded-md"
+            >
+              <div class="flex justify-center items-center gap-2">
+                <div
+                  class="rounded-full size-12 bg-base-300 flex justify-center items-center"
+                >
+                  <img src="assets/opt-1.png" />
+                </div>
+                <div>
+                  <h2 class="text-base text-neutral-700 font-semibold">
+                    Dio Lupa
+                  </h2>
+                  <p class="text-[12px] uppercase opacity-60">Today 01:44 AM</p>
+                </div>
+              </div>
+              <button class="rotate-90 text-lg">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </li>
+            <li
+              class="list-row flex justify-between p-3 bg-slate-300 rounded-md"
+            >
+              <div class="flex justify-center items-center gap-2">
+                <div
+                  class="rounded-full size-12 bg-base-300 flex justify-center items-center"
+                >
+                  <img src="assets/opt-1.png" />
+                </div>
+                <div>
+                  <h2 class="text-base text-neutral-700 font-semibold">
+                    Dio Lupa
+                  </h2>
+                  <p class="text-[12px] uppercase opacity-60">Today 01:44 AM</p>
+                </div>
+              </div>
+              <button class="rotate-90 text-lg">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </li>
+            <li
+              class="list-row flex justify-between p-3 bg-slate-300 rounded-md"
+            >
+              <div class="flex justify-center items-center gap-2">
+                <div
+                  class="rounded-full size-12 bg-base-300 flex justify-center items-center"
+                >
+                  <img src="assets/opt-1.png" />
+                </div>
+                <div>
+                  <h2 class="text-base text-neutral-700 font-semibold">
+                    Dio Lupa
+                  </h2>
+                  <p class="text-[12px] uppercase opacity-60">Today 01:44 AM</p>
+                </div>
+              </div>
+              <button class="rotate-90 text-lg">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </li>
+            <li
+              class="list-row flex justify-between p-3 bg-slate-300 rounded-md"
+            >
+              <div class="flex justify-center items-center gap-2">
+                <div
+                  class="rounded-full size-12 bg-base-300 flex justify-center items-center"
+                >
+                  <img src="assets/opt-1.png" />
+                </div>
+                <div>
+                  <h2 class="text-base text-neutral-700 font-semibold">
+                    Dio Lupa
+                  </h2>
+                  <p class="text-[12px] uppercase opacity-60">Today 01:44 AM</p>
+                </div>
+              </div>
+              <button class="rotate-90 text-lg">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="cashout" class="w-11/12 mx-auto py-5">
+        <h2 class="text-xl font-bold mb-5">Cash Out</h2>
+        <div class="card max-w-full shadow-black rounded-2xl bg-base-100">
+          <div class="card-body">
+            <fieldset class="fieldset">
+              <label class="label text-neutral text-base text-base font-medium"
+                >Agent Number</label
+              >
+              <input
+                id="agent-number"
+                type="text"
+                value="01234567890"
+                minlength="11"
+                maxlength="11"
+                class="input w-full bg-base-300 rounded-2xl outline-none"
+                placeholder="Enter your agent number "
+              />
+              <label class="label text-neutral text-base text-base font-medium"
+                >Amount</label
+              >
+              <input
+                id="cashout-amount"
+                type="number"
+                minlength="11"
+                maxlength="11"
+                class="input w-full bg-base-300 rounded-2xl outline-none"
+                placeholder="Enter your the amount "
+              />
+              <label class="label text-neutral text-base pt-4 font-medium"
+                >4 Digit Pin</label
+              >
+              <input
+                id="cashout-pass"
+                type="password"
+                minlength="4"
+                maxlength="4"
+                class="input w-full bg-base-300 rounded-2xl outline-none"
+                placeholder="Password"
+              />
+              <button
+                id="cashout-btn"
+                class="btn btn-primary mt-4 rounded-2xl text-[20px] font-semibold"
+              >
+                Withdraw
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Script Here -->
+    <script src="script/commonfunction.js"></script>
+    <script src="script/cash-out.js"></script>
   </body>
 </html>
