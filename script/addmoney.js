@@ -11,7 +11,6 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   }
   const amount = getValueFromInput("add-amount");
   const newBalance = getBalance() + Number(amount);
-  console.log(newBalance);
 
   const pass = getValueFromInput("add-pass");
   if (pass == "1234") {

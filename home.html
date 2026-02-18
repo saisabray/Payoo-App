@@ -78,6 +78,7 @@
               <p>Cash Out</p>
             </div>
             <div
+              onclick="showOnly('send-money')"
               class="button btn flex-col w-32 h-full py-5 btn-primary btn-soft rounded-sm"
             >
               <img src="assets/opt-3.png" alt="" />
@@ -133,7 +134,7 @@
                 class="input w-full bg-base-300 rounded-2xl outline-none"
                 placeholder="Enter your the amount "
               />
-              <label class="label text-neutral text-base pt-4 font-medium"
+              <label class="label text-neutral text-base font-medium"
                 >4 Digit Pin</label
               >
               <input
@@ -173,7 +174,6 @@
                 <option>City Bank</option>
                 <option>Dhaka Bank</option>
               </select>
-              <br />
               <label class="label text-neutral text-base text-base font-medium"
                 >Bank Account Number</label
               >
@@ -196,7 +196,7 @@
                 class="input w-full bg-base-300 rounded-2xl outline-none"
                 placeholder="Enter your the amount "
               />
-              <label class="label text-neutral text-base pt-4 font-medium"
+              <label class="label text-neutral text-base font-medium"
                 >Pin Number</label
               >
               <input
@@ -217,6 +217,67 @@
           </div>
         </div>
       </section>
+      <section id="send-money" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-xl font-bold mb-5">Transfer Money</h2>
+
+        <div class="card max-w-full shadow-black rounded-2xl bg-base-100">
+          <div class="card-body">
+            <fieldset class="fieldset">
+              <label class="label text-neutral text-base text-base font-medium"
+                >Select A Bank</label
+              >
+              <select
+                id="transfer-bank"
+                class="select w-full rounded-2xl outline-none bg-base-300"
+              >
+                <option disabled selected>Select a bank</option>
+                <option>DBBl</option>
+                <option>City Bank</option>
+                <option>Dhaka Bank</option>
+              </select>
+              <label class="label text-neutral text-base text-base font-medium"
+                >Bank Account Number</label
+              >
+              <input
+                id="transfer-account-number"
+                type="text"
+                minlength="11"
+                maxlength="11"
+                class="input w-full bg-base-300 rounded-2xl outline-none"
+                placeholder="Enter your account number "
+              />
+              <label class="label text-neutral text-base text-base font-medium"
+                >Amount
+              </label>
+              <input
+                id="transfer-amount"
+                type="number"
+                minlength="11"
+                maxlength="11"
+                class="input w-full bg-base-300 rounded-2xl outline-none"
+                placeholder="Enter your the amount "
+              />
+              <label class="label text-neutral text-base font-medium"
+                >Pin Number</label
+              >
+              <input
+                id="transfer-pass"
+                type="password"
+                minlength="4"
+                maxlength="4"
+                class="input w-full bg-base-300 rounded-2xl outline-none"
+                placeholder="Password"
+              />
+              <button
+                id="transfer-money-btn"
+                class="btn btn-primary mt-4 rounded-2xl text-[20px] font-semibold"
+              >
+                Transfer Money
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </section>
       <section id="history" class="py-10 w-11/12 mx-auto space-y-5 hidden">
         <div class="flex justify-between items-center space-y-5">
           <h2 class="font-bold text-xl">Transactions</h2>
@@ -228,6 +289,7 @@
 
     <!-- Script Here -->
     <script src="script/login.js"></script>
+    <script src="script/transfer.js"></script>
     <script src="script/logout.js"></script>
     <script src="script/addmoney.js"></script>
     <script src="script/commonfunction.js"></script>
