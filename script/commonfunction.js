@@ -15,3 +15,13 @@ function setValue(value) {
 function clearInput(id) {
   document.getElementById(id).value = "";
 }
+function showOnly(id) {
+  const addMoney = document.getElementById("add-money");
+  const cashOut = document.getElementById("cashout");
+  const translist = document.getElementById("history");
+  addMoney.classList.add("hidden");
+  cashOut.classList.add("hidden");
+  translist.classList.add("hidden");
+  const selected = document.getElementById(id);
+  selected.classList.remove("hidden");
+}

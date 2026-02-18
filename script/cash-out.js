@@ -1,28 +1,3 @@
-// document.getElementById("cashout-btn").addEventListener("click", function () {
-//   const agentNumber = document.getElementById("agent-number").value;
-//   if (agentNumber.length != 11) {
-//     alert("Invaild Number");
-//     return;
-//   }
-//   const cashoutAmount = document.getElementById("cashout-amount").value;
-//   const balanceElement = document.getElementById("balance");
-//   const balance = balanceElement.innerText;
-
-//   const newBalance = Number(balance) - Number(cashoutAmount);
-//   if (newBalance < 0) {
-//     alert("Insufficient balance");
-//     return;
-//   }
-//   const cashoutPass = document.getElementById("cashout-pass").value;
-//   if (cashoutPass == "1234") {
-//     balanceElement.innerText = newBalance;
-//   } else {
-//     alert("Wrong Password");
-//   }
-// });
-
-// ***********************************
-
 document.getElementById("cashout-btn").addEventListener("click", function () {
   const cashoutNumber = getValueFromInput("agent-number");
   if (cashoutNumber.length != 11) {
@@ -40,6 +15,28 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   if (cashoutPass == "1234") {
     alert("Cash Out Successfully");
     setValue(newBalance);
+    const now = new Date().toLocaleString();
+    const history = document.getElementById("history");
+    const li = document.createElement("li");
+    li.className = "list-row flex justify-between p-3 bg-slate-300 rounded-md";
+    li.innerHTML = `
+    <div class="flex justify-center items-center gap-2">
+      <div class="rounded-full size-12 bg-base-300 flex justify-center items-center">
+        <img src="assets/opt-2.png" alt="icon" />
+      </div>
+      <div>
+        <h2 class="text-base text-neutral-700 font-semibold">Send Money</h2>
+        <p class="text-[12px] uppercase opacity-60">${now} - ${cashoutAmount}</p>
+      </div>
+    </div>
+    <button class="rotate-90 text-lg">
+      <i class="fa-solid fa-ellipsis"></i>
+    </button>
+  `;
+    history.appendChild(li);
+    clearInput("account-number");
+    clearInput("add-amount");
+    clearInput("add-pass");
     clearInput("cashout-amount");
     clearInput("cashout-pass");
     clearInput("agent-number");
