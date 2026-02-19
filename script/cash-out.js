@@ -5,7 +5,6 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     return;
   }
   const cashoutAmount = getValueFromInput("cashout-amount");
-  const currentBalance = getBalance();
   const newBalance = getBalance() - Number(cashoutAmount);
   if (newBalance < 0) {
     alert("Insufficient Balance");
@@ -34,9 +33,6 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     </button>
   `;
     history.appendChild(li);
-    clearInput("account-number");
-    clearInput("add-amount");
-    clearInput("add-pass");
     clearInput("cashout-amount");
     clearInput("cashout-pass");
     clearInput("agent-number");
